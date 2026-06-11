@@ -1,0 +1,9 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: *
+Allow: /
+Disallow: /thank-you/
+Disallow: /404
+
+Sitemap: https://caryjunkremovers.com/sitemap-index.xml

@@ -1,0 +1,89 @@
+---
+// No frontmatter data needed — steps hardcoded in template to avoid TS union inference issues with set:html
+---
+
+<section class="bg-white py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <p class="text-orange-500 font-semibold uppercase tracking-wider text-sm mb-3">Simple Process</p>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-4">
+        How We Make Junk Removal Simple
+      </h2>
+      <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+        From your first call to a clutter-free space — our process is designed to be fast, easy, and stress-free.
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="relative grid md:grid-cols-3 gap-8 lg:gap-12">
+
+      <!-- Connector Line (desktop) -->
+      <div class="hidden md:block absolute top-14 left-[calc(16.666%+2rem)] right-[calc(16.666%+2rem)] h-0.5 bg-gradient-to-r from-orange-200 via-orange-400 to-orange-200"></div>
+
+      <!-- Step 1 -->
+      <div class="relative flex flex-col items-center text-center group">
+        <div class="relative mb-6">
+          <div class="w-28 h-28 rounded-full bg-orange-50 border-4 border-orange-100 group-hover:border-orange-300 flex items-center justify-center transition-colors duration-300 relative z-10">
+            <svg class="w-10 h-10 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+            </svg>
+          </div>
+          <span class="absolute -top-1 -right-1 w-7 h-7 bg-orange-500 text-white text-xs font-black rounded-full flex items-center justify-center z-20">1</span>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-3">Get Your Free Estimate</h3>
+        <p class="text-slate-500 leading-relaxed">
+          Call us or fill out our quick online form. We'll give you an honest, upfront price in minutes — no surprises, no obligations.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="relative flex flex-col items-center text-center group">
+        <div class="relative mb-6">
+          <div class="w-28 h-28 rounded-full bg-orange-50 border-4 border-orange-100 group-hover:border-orange-300 flex items-center justify-center transition-colors duration-300 relative z-10">
+            <svg class="w-10 h-10 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+            </svg>
+          </div>
+          <span class="absolute -top-1 -right-1 w-7 h-7 bg-orange-500 text-white text-xs font-black rounded-full flex items-center justify-center z-20">2</span>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-3">We Remove The Junk</h3>
+        <p class="text-slate-500 leading-relaxed">
+          Our professional crew arrives on schedule and handles all the heavy lifting. You don't lift a finger — just point and watch.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="relative flex flex-col items-center text-center group">
+        <div class="relative mb-6">
+          <div class="w-28 h-28 rounded-full bg-orange-50 border-4 border-orange-100 group-hover:border-orange-300 flex items-center justify-center transition-colors duration-300 relative z-10">
+            <svg class="w-10 h-10 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <span class="absolute -top-1 -right-1 w-7 h-7 bg-orange-500 text-white text-xs font-black rounded-full flex items-center justify-center z-20">3</span>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-3">Enjoy Your Clean Space</h3>
+        <p class="text-slate-500 leading-relaxed">
+          We haul everything away, do a final sweep, and leave your space spotless. That's it — no mess, no stress, no follow-up.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="text-center mt-14">
+      <a
+        href="#contact"
+        class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-orange-500/25 hover:-translate-y-0.5"
+      >
+        Start With A Free Estimate
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>

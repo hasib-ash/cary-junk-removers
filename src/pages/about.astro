@@ -1,0 +1,200 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const values = [
+  {
+    title: 'Honest Pricing',
+    desc: 'You get a firm quote before we start. No upsells, no add-ons, no surprises on the invoice.',
+  },
+  {
+    title: 'Respect For Your Home',
+    desc: 'We protect floors, walls, and doorways on every job. We leave the space cleaner than we found it.',
+  },
+  {
+    title: 'Eco-Responsible Disposal',
+    desc: 'We donate usable items to local charities and recycle materials before anything goes to a landfill.',
+  },
+  {
+    title: 'Show Up On Time',
+    desc: 'We give you a narrow arrival window and stick to it. Your time matters as much as the job does.',
+  },
+];
+
+const stats = [
+  { value: '500+', label: 'Jobs Completed' },
+  { value: '4.9★', label: 'Google Rating' },
+  { value: '200+', label: 'Five-Star Reviews' },
+  { value: '3+', label: 'Years Serving Cary' },
+];
+---
+
+<BaseLayout
+  title="About Us"
+  description="Cary Junk Removers is a locally owned junk removal company serving Cary, NC and the Triangle. Learn about our team, values, and commitment to the community."
+>
+  <main>
+
+    <!-- Hero -->
+    <section class="bg-slate-900 py-20 md:py-28 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 32px 32px;"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <p class="text-orange-500 font-semibold uppercase tracking-wider text-sm mb-4">About Us</p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+            Cary's Locally Owned<br/>
+            <span class="text-orange-500">Junk Removal Team</span>
+          </h1>
+          <p class="text-lg text-slate-300 leading-relaxed max-w-2xl">
+            We started Cary Junk Removers with one goal: make junk removal the easiest home service experience you've ever had. No runaround, no hidden fees, just a reliable crew that shows up, does the work, and leaves your space spotless.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="bg-orange-500">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-row flex-wrap justify-center items-center gap-8 md:gap-14 text-center">
+          {stats.map(s => (
+            <div>
+              <p class="text-3xl md:text-4xl font-black text-white">{s.value}</p>
+              <p class="text-orange-100 text-sm font-medium mt-1">{s.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="bg-white py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+          <!-- Image -->
+          <div class="relative">
+            <div class="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="/images/junk-removal-team.jpg" alt="Cary Junk Removers team after a successful job" class="w-full h-full object-cover" />
+            </div>
+            <!-- Badge -->
+            <div class="absolute -bottom-5 -right-5 bg-slate-900 text-white rounded-2xl px-5 py-4 shadow-2xl">
+              <p class="text-xs font-bold uppercase tracking-wider text-orange-500 mb-0.5">Locally Owned</p>
+              <p class="text-white font-bold">Cary, NC</p>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div>
+            <p class="text-orange-500 font-semibold uppercase tracking-wider text-sm mb-3">Our Story</p>
+            <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-5">
+              Built on a Simple Promise
+            </h2>
+            <div class="space-y-4 text-slate-600 leading-relaxed">
+              <p>
+                Cary Junk Removers was founded right here in Cary, NC by a local family who got tired of dealing with junk removal companies that didn't show up on time, charged hidden fees, or left a mess behind.
+              </p>
+              <p>
+                We built this business the right way — with transparent pricing, a professional crew, and a commitment to the Triangle community. Every person on our team is background-checked, trained, and held to the same standard we'd want in our own home.
+              </p>
+              <p>
+                Today we serve homeowners, landlords, property managers, and businesses across Cary, Apex, Morrisville, Holly Springs, and the greater Raleigh area. Same-day service, upfront pricing, and a spotless finish on every job — that's the promise we make and keep.
+              </p>
+            </div>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+              <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-7 py-3.5 rounded-xl transition-all duration-200 shadow-lg hover:shadow-orange-500/25">
+                Get Free Estimate
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </a>
+              <a href="tel:+19195550000" class="inline-flex items-center justify-center gap-2 border-2 border-slate-200 hover:border-orange-400 text-slate-700 hover:text-orange-500 font-bold px-7 py-3.5 rounded-xl transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+                (919) 555-0000
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="bg-slate-50 py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <p class="text-orange-500 font-semibold uppercase tracking-wider text-sm mb-3">What We Stand For</p>
+          <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-4">Our Values</h2>
+          <p class="text-lg text-slate-500 max-w-xl mx-auto">
+            These aren't slogans — they're the standards we hold ourselves to on every single job.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {values.map((v, i) => (
+            <div class="bg-white border border-slate-100 hover:border-orange-200 hover:shadow-lg rounded-2xl p-6 transition-all duration-300">
+              <div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center text-orange-600 font-black text-lg mb-4">
+                {i + 1}
+              </div>
+              <h3 class="font-bold text-slate-900 mb-2">{v.title}</h3>
+              <p class="text-slate-500 text-sm leading-relaxed">{v.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Placeholder -->
+    <section class="bg-white py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <p class="text-orange-500 font-semibold uppercase tracking-wider text-sm mb-3">The People Behind The Trucks</p>
+          <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-4">Meet The Team</h2>
+          <p class="text-lg text-slate-500 max-w-xl mx-auto">
+            Every crew member is background-checked, trained, and takes real pride in the work.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {['Owner & Founder', 'Lead Crew Member', 'Operations Manager'].map((role) => (
+            <div class="text-center group">
+              <div class="w-32 h-32 rounded-2xl bg-gradient-to-br from-slate-200 to-slate-300 mx-auto mb-4 flex items-center justify-center text-slate-400 group-hover:shadow-lg transition-shadow">
+                <svg class="w-10 h-10 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                </svg>
+              </div>
+              <p class="font-bold text-slate-900">Team Member</p>
+              <p class="text-slate-500 text-sm">{role}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="bg-slate-900 py-16 md:py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-black text-white mb-4">
+          Ready To Work With Us?
+        </h2>
+        <p class="text-slate-400 text-lg mb-8">
+          Same-day estimates available. Call or request online — we respond fast.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-orange-500/25 hover:-translate-y-0.5">
+            Get Free Estimate
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+          <a href="tel:+19195550000" class="inline-flex items-center justify-center gap-2 border-2 border-white/20 hover:border-white/50 text-white font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200">
+            <svg class="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            (919) 555-0000
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>

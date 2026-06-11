@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/sections/HeroSection.astro';
+import HowItWorks from '../components/sections/HowItWorks.astro';
+import ServicesGrid from '../components/sections/ServicesGrid.astro';
+import BenefitSection from '../components/sections/BenefitSection.astro';
+import WhyChooseUs from '../components/sections/WhyChooseUs.astro';
+import ProjectShowcase from '../components/sections/ProjectShowcase.astro';
+import Testimonials from '../components/sections/Testimonials.astro';
+import FAQ from '../components/sections/FAQ.astro';
+import FinalCTA from '../components/sections/FinalCTA.astro';
+import { localBusinessSchema, faqPageSchema } from '../lib/schema';
+import SchemaMarkup from '../components/SchemaMarkup.astro';
+
+const businessSchema = localBusinessSchema({
+  name: 'Cary Junk Removers',
+  url: 'https://caryjunkremovers.com',
+  telephone: '+19195550000',
+  address: {
+    streetAddress: '123 Main Street',
+    addressLocality: 'Cary',
+    addressRegion: 'NC',
+    postalCode: '27511',
+    addressCountry: 'US',
+  },
+  openingHours: [
+    'Monday–Saturday 07:00–19:00',
+    'Sunday 08:00–17:00',
+  ],
+});
+
+const faqSchema = faqPageSchema([
+  { question: 'How much does junk removal cost?', answer: 'Pricing depends on volume and type. Most jobs range from $75 to $600. We provide upfront pricing before starting.' },
+  { question: 'Do you offer same-day service?', answer: 'Yes! Same-day and next-day service available in most cases, subject to availability.' },
+  { question: 'What items can you remove?', answer: 'Almost everything — furniture, appliances, hot tubs, sheds, construction debris, and more. Hazardous materials excluded.' },
+  { question: 'Are you licensed and insured?', answer: 'Yes. Fully licensed in North Carolina with liability and workers compensation insurance on every job.' },
+  { question: 'Do you clean up afterward?', answer: 'Yes. Our crew does a full sweep after every job and leaves the area cleaner than we found it.' },
+  { question: 'How quickly can I get an estimate?', answer: 'Instantly. Call or fill out our online form for a free estimate in minutes.' },
+]);
+---
+
+<BaseLayout
+  title="Cary's #1 Junk Removal Service"
+  description="Professional junk removal in Cary, NC. Same-day service, upfront pricing, licensed & insured. Furniture, appliances, hot tubs, sheds & more. Call for a free estimate."
+  ogImage="/og-default.jpg"
+>
+  <SchemaMarkup schema={businessSchema} />
+  <SchemaMarkup schema={faqSchema} />
+
+  <main>
+    <HeroSection />
+    <HowItWorks />
+    <ServicesGrid />
+    <BenefitSection />
+    <WhyChooseUs />
+    <ProjectShowcase />
+    <Testimonials />
+    <FAQ />
+    <FinalCTA />
+  </main>
+</BaseLayout>

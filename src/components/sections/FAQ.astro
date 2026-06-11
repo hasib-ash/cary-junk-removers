@@ -1,0 +1,81 @@
+---
+const faqs = [
+  {
+    q: 'How much does junk removal cost?',
+    a: 'Pricing depends on the volume and type of items. Most jobs range from $75 to $600. We give you a firm, upfront price before we start — no surprises. Call or request a free estimate online and we\'ll give you a number in minutes.',
+  },
+  {
+    q: 'Do you offer same-day service?',
+    a: 'Yes! We offer same-day and next-day service in most cases, subject to availability. Call us in the morning and we can often have a crew at your location the same afternoon.',
+  },
+  {
+    q: 'What items can you remove?',
+    a: 'Almost everything — furniture, appliances, electronics, yard debris, hot tubs, sheds, construction debris, and more. The few items we can\'t take include hazardous materials like paint, chemicals, propane tanks, and asbestos.',
+  },
+  {
+    q: 'Are you licensed and insured?',
+    a: 'Yes, fully. We are licensed in North Carolina and carry full liability and workers\' compensation insurance. You\'re protected on every job we do.',
+  },
+  {
+    q: 'Do you clean up after the job?',
+    a: 'Absolutely. Our crew does a full sweep after every job. We leave the area cleaner than we found it — that\'s our standard, not an upgrade.',
+  },
+  {
+    q: 'How quickly can I get an estimate?',
+    a: 'Instantly. Fill out our online form or call us and we\'ll give you a free, no-obligation estimate within minutes. No waiting, no pressure, no sales tactics.',
+  },
+];
+---
+
+<section id="faq" class="bg-slate-50 py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center mb-14">
+      <p class="text-orange-500 font-semibold uppercase tracking-wider text-sm mb-3">Common Questions</p>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-4">
+        Frequently Asked Questions
+      </h2>
+      <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+        Everything you need to know before booking. Still have questions? Call us at (919) 555-0000.
+      </p>
+    </div>
+
+    <!-- Two-column accordion -->
+    <div class="grid md:grid-cols-2 gap-4 lg:gap-6 max-w-5xl mx-auto">
+      {faqs.map(faq => (
+        <details class="group bg-white border border-slate-200 hover:border-orange-200 rounded-2xl overflow-hidden transition-colors duration-200">
+          <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer select-none list-none">
+            <span class="font-semibold text-slate-900 text-base leading-snug">{faq.q}</span>
+            <span class="faq-icon flex-shrink-0 w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center text-orange-500">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/>
+              </svg>
+            </span>
+          </summary>
+          <div class="px-6 pb-6 -mt-1">
+            <p class="text-slate-500 leading-relaxed text-sm md:text-base">{faq.a}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <!-- Bottom prompt -->
+    <div class="text-center mt-12 bg-white border border-slate-200 rounded-2xl p-8 max-w-2xl mx-auto">
+      <p class="text-slate-900 font-bold text-xl mb-2">Still have questions?</p>
+      <p class="text-slate-500 mb-6">Our team is available 7 days a week to answer anything you need.</p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="tel:+19195550000" class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-xl transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          Call (919) 555-0000
+        </a>
+        <a href="#contact" class="inline-flex items-center justify-center gap-2 border-2 border-slate-200 hover:border-orange-400 text-slate-700 hover:text-orange-500 font-bold px-6 py-3 rounded-xl transition-colors">
+          Send A Message
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>

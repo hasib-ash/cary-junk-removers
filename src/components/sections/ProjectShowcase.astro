@@ -1,0 +1,107 @@
+---
+const projects = [
+  {
+    title: 'Full Garage Cleanout',
+    location: 'Cary, NC',
+    type: 'Household Junk',
+    desc: '3-car garage packed with 15 years of accumulated items. Cleared in a single afternoon.',
+    image: '/images/Residential.jpg',
+  },
+  {
+    title: 'Junk Haul-Away',
+    location: 'Apex, NC',
+    type: 'Full Truck Load',
+    desc: 'Full truck load of mixed junk — furniture, appliances, boxes, and debris hauled in one trip.',
+    image: '/images/truck-full.webp',
+  },
+  {
+    title: 'Yard & Shed Cleanup',
+    location: 'Morrisville, NC',
+    type: 'Yard Debris',
+    desc: 'Complete yard cleanup — brush piles, old shed, debris, and scrap tires removed same day.',
+    image: '/images/yard-waste.jpg',
+  },
+  {
+    title: 'Estate Cleanout',
+    location: 'Raleigh, NC',
+    type: 'Estate Cleanout',
+    desc: 'Full 4-bedroom estate cleanout completed in one day for a family during a difficult transition.',
+    image: '/images/Cleanouts.jpg',
+  },
+  {
+    title: 'Crew & Truck Ready',
+    location: 'Holly Springs, NC',
+    type: 'Residential Removal',
+    desc: 'Professional crew arrives loaded and ready — appliances, furniture, and mixed junk all gone.',
+    image: '/images/team-truck.jpg',
+  },
+  {
+    title: 'Construction Debris',
+    location: 'Cary, NC',
+    type: 'Post-Renovation',
+    desc: 'Post-renovation cleanup of drywall, lumber, tile, and debris cleared before new flooring install.',
+    image: '/images/construction-debris.jpg',
+  },
+];
+---
+
+<section id="projects" class="bg-slate-50 py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center mb-14">
+      <p class="text-orange-500 font-semibold uppercase tracking-wider text-sm mb-3">Real Jobs, Real Results</p>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-4">
+        Recent Projects
+      </h2>
+      <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+        From single-item pickups to full property cleanouts across the Triangle — here's a look at what we do.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {projects.map(project => (
+        <div class="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+
+          <!-- Project Image -->
+          <div class="aspect-video relative overflow-hidden">
+            <img src={project.image} alt={project.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <!-- Type badge -->
+            <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-slate-700 text-xs font-semibold px-2.5 py-1 rounded-full shadow-sm">
+              {project.type}
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-bold text-slate-900 text-base">{project.title}</h3>
+              <span class="shrink-0 flex items-center gap-1 text-slate-400 text-xs font-medium">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                {project.location}
+              </span>
+            </div>
+            <p class="text-slate-500 text-sm leading-relaxed">{project.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-12">
+      <a
+        href="#contact"
+        class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-orange-500/25 hover:-translate-y-0.5"
+      >
+        Get Your Free Estimate
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>

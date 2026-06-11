@@ -1,0 +1,69 @@
+---
+const benefits = [
+  { label: 'Fast, Same-Day Service', desc: 'Call in the morning, we\'re there same day in most cases.' },
+  { label: 'No Heavy Lifting For You', desc: 'Our crew handles every item from start to finish.' },
+  { label: 'Full Cleanup Included', desc: 'We sweep up and leave the area cleaner than we found it.' },
+  { label: 'Eco-Friendly Disposal', desc: 'We donate, recycle, and responsibly dispose — not just dump.' },
+  { label: 'Transparent, Upfront Pricing', desc: 'Know exactly what you\'ll pay before we lift a finger.' },
+];
+---
+
+<section class="bg-white py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+      <!-- Left: Image -->
+      <div class="relative order-2 lg:order-1">
+        <div class="rounded-2xl overflow-hidden aspect-[4/3]">
+          <img src="/images/team-truck.jpg" alt="Cary Junk Removers crew ready to remove your junk" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Floating Badge -->
+        <div class="absolute -bottom-5 -right-5 bg-slate-900 text-white rounded-2xl px-5 py-4 shadow-2xl">
+          <p class="text-3xl font-black text-orange-500">4.9★</p>
+          <p class="text-slate-300 text-xs font-medium mt-0.5">200+ Google Reviews</p>
+        </div>
+      </div>
+
+      <!-- Right: Content -->
+      <div class="order-1 lg:order-2">
+        <p class="text-orange-500 font-semibold uppercase tracking-wider text-sm mb-3">Why It's Easy</p>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 leading-tight mb-5">
+          Get Your Space Back Without<br/>
+          <span class="text-orange-500">The Stress</span>
+        </h2>
+        <p class="text-lg text-slate-500 leading-relaxed mb-8">
+          We handle everything from start to finish. No coordinating multiple companies, no renting dumpsters, no heavy lifting. Just point — and watch it disappear.
+        </p>
+
+        <!-- Benefits List -->
+        <ul class="space-y-4 mb-10">
+          {benefits.map(b => (
+            <li class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center mt-0.5">
+                <svg class="w-3.5 h-3.5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </span>
+              <div>
+                <p class="font-semibold text-slate-900">{b.label}</p>
+                <p class="text-slate-500 text-sm mt-0.5">{b.desc}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+
+        <a
+          href="#contact"
+          class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-orange-500/25 hover:-translate-y-0.5"
+        >
+          Get My Free Estimate
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>

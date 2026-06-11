@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary brand green replaces orange scale */
+  --color-orange-50:  #f5f9e0;
+  --color-orange-100: #edf5b3;
+  --color-orange-200: #d9ed7a;
+  --color-orange-300: #c4e34d;
+  --color-orange-400: #b5d620;
+  --color-orange-500: #a6cb00;
+  --color-orange-600: #83a701;
+
+  /* Secondary dark replaces slate-900 */
+  --color-slate-900:  #282a2d;
+  --color-slate-800:  #33363a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* FAQ accordion animation */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-icon {
+  transition: transform 0.2s ease;
+}

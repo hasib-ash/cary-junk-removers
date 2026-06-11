@@ -1,0 +1,107 @@
+---
+const testimonials = [
+  {
+    name: 'Sarah M.',
+    location: 'Cary, NC',
+    jobType: 'Garage Cleanout',
+    quote: 'They showed up on time, worked fast, and left my garage completely spotless. I couldn\'t believe how quickly they cleared 15 years of stuff. Absolutely worth every penny.',
+    initials: 'SM',
+    color: 'bg-blue-100 text-blue-600',
+  },
+  {
+    name: 'Mike R.',
+    location: 'Apex, NC',
+    jobType: 'Hot Tub Removal',
+    quote: 'Used them for a hot tub removal that two other companies refused to do. Price was fair and exactly what they quoted, crew was professional, whole thing done in under 2 hours. Impressive.',
+    initials: 'MR',
+    color: 'bg-purple-100 text-purple-600',
+  },
+  {
+    name: 'Jennifer L.',
+    location: 'Morrisville, NC',
+    jobType: 'Estate Cleanout',
+    quote: 'Called at 8am and they were at my door by noon. Cleared out an entire 4-bedroom estate in one day. The team was so kind and professional during a really difficult time for our family.',
+    initials: 'JL',
+    color: 'bg-rose-100 text-rose-600',
+  },
+];
+---
+
+<section class="bg-white py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center mb-14">
+      <p class="text-orange-500 font-semibold uppercase tracking-wider text-sm mb-3">Customer Reviews</p>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-4">
+        Trusted By Homeowners Across the Triangle
+      </h2>
+      <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+        Don't take our word for it. Here's what real customers say about working with Cary Junk Removers.
+      </p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="grid md:grid-cols-3 gap-6 lg:gap-8 mb-14">
+      {testimonials.map(t => (
+        <div class="bg-slate-50 border border-slate-100 rounded-2xl p-7 flex flex-col hover:shadow-lg transition-shadow duration-300">
+          <!-- Stars -->
+          <div class="flex gap-0.5 mb-5">
+            {[...Array(5)].map(() => (
+              <svg class="w-5 h-5 text-amber-400 fill-amber-400" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            ))}
+          </div>
+
+          <!-- Quote -->
+          <p class="text-slate-600 leading-relaxed flex-1 mb-6 text-sm md:text-base italic">
+            "{t.quote}"
+          </p>
+
+          <!-- Reviewer -->
+          <div class="flex items-center gap-3 pt-5 border-t border-slate-200">
+            <!-- Avatar placeholder -->
+            <div class={`w-10 h-10 rounded-full ${t.color} flex items-center justify-center font-bold text-sm shrink-0`}>
+              {t.initials}
+            </div>
+            <div>
+              <p class="font-semibold text-slate-900 text-sm">{t.name}</p>
+              <p class="text-slate-400 text-xs">{t.location} · {t.jobType}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Aggregate Stats -->
+    <div class="bg-slate-900 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-center md:text-left">
+        <p class="text-white text-xl font-bold mb-1">Verified Customer Reviews</p>
+        <p class="text-slate-400 text-sm">Collected from Google, Yelp, and Facebook</p>
+      </div>
+      <div class="flex flex-wrap justify-center md:justify-end gap-8 lg:gap-12">
+        <div class="text-center">
+          <p class="text-4xl font-black text-orange-500">4.9</p>
+          <div class="flex gap-0.5 justify-center my-1">
+            {[...Array(5)].map(() => (
+              <svg class="w-4 h-4 text-amber-400 fill-amber-400" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            ))}
+          </div>
+          <p class="text-slate-400 text-xs">Avg Rating</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl font-black text-orange-500">200+</p>
+          <p class="text-slate-400 text-xs mt-2">Google Reviews</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl font-black text-orange-500">500+</p>
+          <p class="text-slate-400 text-xs mt-2">Happy Customers</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
